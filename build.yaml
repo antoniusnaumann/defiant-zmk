@@ -1,2 +1,2 @@
-board: [ "seeed_xiao" ]
+board: [ "xiao_ble" ]
 shield: [ "defiant_left", "defiant_right" ]
