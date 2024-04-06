@@ -1,2 +1,2 @@
-board: [ "xiao_ble" ]
+board: [ "seeeduino_xiao_ble" ]
 shield: [ "defiant_left", "defiant_right" ]
