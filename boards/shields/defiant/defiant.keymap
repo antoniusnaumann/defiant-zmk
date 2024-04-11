@@ -20,12 +20,13 @@ keymap {
 
     symbol_layer {
         bindings = <
-        &kp STAR  &kp HASH  &kp LBKT &kp RBKT  &kp DLLAR                         &kp PRCNT &kp GT    &kp LT    &kp EQUAL &kp RBKT    
+        &kp STAR  &kp HASH  &kp LBKT &kp RBKT  &kp DOLLAR                        &kp PRCNT &kp GT    &kp LT    &kp EQUAL &kp RBKT    
         &kp COLON &kp UNDER &kp LPAR &kp DQT   &kp FSLH  &kp  LGUI    &kp  RCTRL &kp AMPS  &kp SQT   &kp LBRC  &kp MINUS &kp SEMI 
-        &kp TILDE &kp AT    &kp RPAR &kp QMARK &kp BSLH  &kp  LCTRL   &kp  RALT  &kp PIPE  &kp EXCL  &kp RBRC  &kp DOT   &kp GRAVE 
-                  &kp LGUI  &kp DEL  &kp TAB   &kp SPACE &tog SYM     &tog SYM   &kp RET   &kp BSPC  &kp ESC   &kp RALT
+        &kp TILDE &kp AT    &kp RPAR &kp QMARK &kp BSLH  &kp  LCTRL   &kp  RALT  &kp PIPE  &kp EXCL  &kp RBRC  &kp CARET &kp GRAVE 
+                  &kp LGUI  &kp DEL  &kp TAB   &kp SPACE &sl  SYM     &sl  SYM   &kp RET   &kp BSPC  &kp ESC   &kp RALT
         >;
     };
+
 };
 
 };
