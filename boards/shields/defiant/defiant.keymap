@@ -5,6 +5,7 @@
 #define DEF 0
 #define SYM 1
 #define NUM 2
+#define NAV 3
 
 / {
 
@@ -14,9 +15,9 @@ keymap {
     default_layer {
         bindings = <
         &kp LBKT  &kp W     &kp F     &kp P   &kp B                             &kp J     &kp L     &kp U     &kp Y     &kp RBKT    
-        &kp A     &kp R     &kp S     &kp T   &kp G      &kp LGUI    &kp RCTRL  &kp M     &kp N     &kp E     &kp I     &kp O 
-        &kp COMMA &kp X     &kp C     &kp D   &kp V 	 &kp LCTRL   &kp RALT   &kp K     &kp H     &kp Z     &kp DOT   &kp Q 
-                  &kp LGUI  &kp DEL   &kp TAB &kp SPACE  &sl SYM     &sl SYM    &kp RET   &kp BSPC  &kp ESC   &kp RALT
+        &kp A     &kp R     &kp S     &kp T   &kp G      &kp LGUI   &kp RCTRL   &kp M     &kp N     &kp E     &kp I     &kp O 
+        &kp COMMA &kp X     &kp C     &kp D   &kp V 	 &kp LCTRL  &kp RALT    &kp K     &kp H     &kp Z     &kp DOT   &kp Q 
+                  &kp LGUI  &kp DEL   &kp TAB &lt NAV SPACE &sl SYM &sl SYM   &lt NUM RET &kp BSPC  &kp ESC   &kp RALT
         >;
     };
 
@@ -38,6 +39,16 @@ keymap {
         >;
 
     };
+
+    navigation_layer {
+        bindings = <
+        &kp LBKT  &kp W     &kp F     &kp P   &kp B                             &kp J     &kp L     &kp U     &kp Y     &kp RBKT    
+        &kp A     &kp R     &kp S     &kp T   &kp G      &kp LGUI   &kp RCTRL   &kp M     &kp N     &kp E     &kp I     &kp O 
+        &kp COMMA &kp X     &kp C     &kp D   &kp V 	 &kp LCTRL  &kp RALT    &kp K     &kp H     &kp Z     &kp DOT   &kp Q 
+                  &kp LGUI  &kp DEL   &kp TAB &kp SPACE  &sl SYM    &sl SYM   &lt NUM RET &kp BSPC  &kp ESC   &kp RALT
+        >;
+    };
+
 };
 
 };
