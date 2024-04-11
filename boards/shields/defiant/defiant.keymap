@@ -33,7 +33,7 @@ keymap {
     number_layer {
         bindings = <
         &kp STAR  &kp N7    &kp N8    &kp N9    &kp PLUS                          &kp PRCNT &kp GT    &kp LT    &kp EQUAL &kp RBKT    
-        &kp N0    &kp N4    &kp N5    &kp N6    &kp DOT   &kp  PRCNT   &kp  RCTRL &kp FSLH  &kp EQUAL &kp PLUS  &kp MINUS &kp STAR 
+        &kp N0    &kp N4    &kp N5    &kp N6    &kp DOT &kp  PRCNT &kp  RCTRL &kp FSLH  &mt RSHFT EQUAL &mt RGUI PLUS &mt RALT MINUS &mt RCTRL STAR 
         &kp FSLH  &kp N1    &kp N2    &kp N3    &kp MINUS &kp  EQUAL   &kp  RALT  &kp DLLR  &kp LPAR  &kp RPAR  &kp DOT   &kp COMMA 
                   &kp LGUI  &kp DEL   &kp TAB   &kp SPACE &sl  SYM     &sl  SYM   &kp RET   &kp BSPC  &to DEF   &kp RALT
         >;
@@ -45,7 +45,7 @@ keymap {
         &kp LBKT  &kp W     &kp F     &kp P   &kp B                             &kp J     &kp L     &kp U     &kp Y     &kp RBKT    
         &kp A     &kp R     &kp S     &kp T   &kp G      &kp LGUI   &kp RCTRL   &kp M     &kp N     &kp E     &kp I     &kp O 
         &kp COMMA &kp X     &kp C     &kp D   &kp V 	 &kp LCTRL  &kp RALT    &kp K     &kp H     &kp Z     &kp DOT   &kp Q 
-                  &kp LGUI  &kp DEL   &kp TAB &kp SPACE  &sl SYM    &sl SYM   &lt NUM RET &kp BSPC  &kp ESC   &kp RALT
+                  &kp LGUI  &kp DEL   &kp TAB &kp SPACE  &sl SYM    &sl SYM   &lt NUM RET &kp BSPC  &to DEF   &kp RALT
         >;
     };
 
