@@ -2,6 +2,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
+#define SYM 1
+
 / {
 
 keymap {
@@ -9,11 +11,21 @@ keymap {
 
     default_layer {
         bindings = <
-         &kp Q    &kp W     &kp E     &kp R     &kp T                             &kp Y     &kp U     &kp I     &kp O     &kp P    
-         &kp A    &kp S     &kp D     &kp F     &kp G      &kp LGUI    &kp RCTRL  &kp H     &kp J     &kp K     &kp L     &kp SEMI 
-         &kp Z    &kp X     &kp C     &kp V     &kp B 	   &kp LCTRL   &kp RALT   &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH 
-                  &kp LGUI  &kp DEL   &kp TAB   &kp SPACE  &kp LSHIFT  &kp RSHIFT &kp RET   &kp BSPC  &kp ESC   &kp RALT
+        &kp LBKT  &kp W     &kp F     &kp P   &kp B                             &kp J     &kp L     &kp U     &kp Y     &kp RBKT    
+        &kp A     &kp R     &kp S     &kp T   &kp G      &kp LGUI    &kp RCTRL  &kp M     &kp N     &kp E     &kp I     &kp O 
+        &kp COMMA &kp X     &kp C     &kp D   &kp V 	 &kp LCTRL   &kp RALT   &kp K     &kp H     &kp Z     &kp DOT   &kp Q 
+                  &kp LGUI  &kp DEL   &kp TAB &kp SPACE  &sl SYM     &sl SYM    &kp K     &kp H     &kp Z     &kp RALT
         >;
+    };
+
+    symbol_layer {
+        bindings = <
+        &kp STAR  &kp HASH  &kp LBKT &kp RBKT &kp B                            &kp J     &kp L     &kp U     &kp Y     &kp RBKT    
+        &kp A     &kp R     &kp S    &kp T    &kp G     &kp LGUI    &kp RCTRL  &kp M     &kp N     &kp E     &kp I     &kp O 
+        &kp COMMA &kp X     &kp C    &kp D    &kp V 	&kp LCTRL   &kp RALT   &kp K     &kp H     &kp Z     &kp DOT   &kp Q 
+                  &kp LGUI  &kp DEL  &kp TAB  &kp SPACE &kp LSHIFT  &kp RSHIFT &kp K     &kp H     &kp Z     &kp RALT
+        >;
+
     };
 };
 
