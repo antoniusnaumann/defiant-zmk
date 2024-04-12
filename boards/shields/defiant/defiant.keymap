@@ -9,6 +9,28 @@
 #define NAV 3
 
 / {
+behaviors {
+    lhm: left_homerow_mods {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        flavor = "tap-unless-interrupted";
+        tapping-term-ms = <100>;                        
+        quick-tap-ms = <200>;
+        bindings = <&kp>, <&kp>;
+        hold-trigger-key-positions = <5 6 7 8 9 16 17 18 19 20 21 28 29 30 31 32 33 39 40 41 42 43>;   
+    };
+ 
+     rhm: right_homerow_mods {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        flavor = "tap-unless-interrupted";
+        tapping-term-ms = <100>;                      
+        quick-tap-ms = <200>;
+        bindings = <&kp>, <&kp>;
+        hold-trigger-key-positions = <0 1 2 3 4 9 10 11 12 13 14 15 22 23 24 25 26 27 34 35 36 37 38>; 
+    };
+
+};
 
 keymap {
     compatible = "zmk,keymap";
