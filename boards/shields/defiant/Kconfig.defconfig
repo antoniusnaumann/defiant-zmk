@@ -1,4 +1,4 @@
-if DEFIANT_LEFT || DEFIANT_RIGHT # TODO  Remove right half here once battery is installed
+if DEFIANT_LEFT 
 
 config ZMK_KEYBOARD_NAME
     default "Defiant"
