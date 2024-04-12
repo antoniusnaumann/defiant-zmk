@@ -1,6 +1,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/bt.h>#
 
 #define DEF 0
 #define SYM 1
@@ -46,7 +47,7 @@ keymap {
 
     navigation_layer {
         bindings = <
-        &kp LBKT  &kp W     &kp F     &kp P   &kp B                             &kp C_PP &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT    
+        &out OUT_TOG &bt BT_CLR &bt BT_PRV &bt BT_NXT   &kp B                           &kp C_PP &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT    
         &kp LCTRL &kp LALT  &kp LGUI  &kp LSHIFT &kp ESC &kp LGUI   &kp RCTRL   &kp ESC   &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT 
         &kp COMMA &kp X     &kp C     &kp D   &kp V 	 &kp LCTRL  &kp RALT    &kp INS   &kp HOME  &kp PG_DN &kp PG_UP &kp END 
                   &kp LGUI  &kp DEL   &kp TAB &kp SPACE  &sl SYM    &sl SYM   &lt NUM RET &kp BSPC  &to DEF   &kp RALT
