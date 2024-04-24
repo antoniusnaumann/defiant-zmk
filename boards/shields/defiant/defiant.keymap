@@ -30,6 +30,61 @@ behaviors {
         hold-trigger-key-positions = <0 1 2 3 4 9 10 11 12 13 14 15 22 23 24 25 26 27 34 35 36 37 38>; 
     };
 
+    hll: hold_long {
+        compatible = "zmk,behavior-hold-tap";
+        label = "Hold-Tap Long";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        bindings =
+            <&kp>,
+            <&kp>;
+
+        tapping-term-ms = <400>;
+        quick-tap-ms = <100>;
+        global-quick-tap;
+    };
+    hl: hold {
+        compatible = "zmk,behavior-hold-tap";
+        label = "Hold-Tap";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        bindings =
+            <&kp>,
+            <&kp>;
+
+        tapping-term-ms = <300>;
+        quick-tap-ms = <100>;
+        global-quick-tap;
+    };
+    hls: hold_short {
+        compatible = "zmk,behavior-hold-tap";
+        label = "Hold-Tap Short";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        bindings =
+            <&kp>,
+            <&kp>;
+
+        tapping-term-ms = <200>;
+        quick-tap-ms = <100>;
+        global-quick-tap;
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        reset_right {
+            bindings = <&bootloader>;
+            key-positions = <16 28 43>;
+            // layers = <0 2>;
+        };
+
+        reset_left {
+            bindings = <&bootloader>;
+            key-positions = <15 27 34>;
+        };
+    };
+
 };
 
 keymap {
@@ -38,9 +93,9 @@ keymap {
     default_layer {
         bindings = <
         &kp LBKT  &kp W     &kp F     &kp P   &kp B                             &kp J     &kp L     &kp U     &kp Y     &kp RBKT    
-        &kp A     &kp R     &kp S     &mt LSHFT T &kp G  &kp LGUI   &kp RCTRL &kp M     &mt RSHFT N &kp E     &kp I     &kp O 
-        &kp COMMA &kp X     &kp C     &kp D   &kp V 	 &kp LCTRL  &kp RALT    &kp K     &kp H     &kp Z     &kp DOT   &kp Q 
-                  &kp LGUI  &kp DEL   &kp TAB &lt NAV SPACE &sl SYM &sl SYM   &lt NUM RET &kp BSPC  &kp ESC   &kp RGUI
+        &kp A     &kp R   &hll LGUI S &hls LSHFT T &kp G  &kp LCTRL  &kp RCTRL &kp M   &hls RSHFT N &hll RGUI E     &kp I     &kp O 
+        &kp COMMA &kp X     &kp C     &kp D   &kp V 	  &kp LGUI   &kp RGUI   &kp K     &kp H     &kp Z     &kp DOT   &kp Q 
+                  &kp LALT  &kp DEL   &kp TAB &lt NAV SPACE &sl SYM &sl SYM   &lt NUM RET &kp BSPC  &kp ESC   &kp RALT
         >;
     };
 
