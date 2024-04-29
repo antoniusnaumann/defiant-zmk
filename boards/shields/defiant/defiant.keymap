@@ -92,8 +92,8 @@ keymap {
 
     default_layer {
         bindings = <
-        &kp LBKT  &kp W     &kp F     &kp P   &kp B                             &kp J     &kp L     &kp U     &kp Y     &kp RBKT    
-        &hll LCTRL A     &hll LALT R   &hll LGUI S &hls LSHFT T &kp G  &kp LCTRL  &kp RCTRL &kp M   &hls RSHFT N &hll RGUI E     &hll LALT I     &hll LCTRL O 
+        &kp LBKT  &kp W     &kp F     &kp P   &kp B                             &kp J     &kp L     &kp U     &kp Y     &kp RBKT  
+        &hll LCTRL A &hll LALT R &hll LGUI S &hls LSHFT T &kp G  &kp LCTRL &kp RCTRL &kp M &hls RSHFT N &hll RGUI E &hll LALT I     &hll LCTRL O 
         &kp COMMA &kp X     &kp C     &kp D   &kp V 	  &kp LGUI   &kp RGUI   &kp K     &kp H     &kp Z     &kp DOT   &kp Q 
                   &kp LALT  &kp DEL   &kp TAB &lt NAV SPACE &sl SYM &sl SYM   &lt NUM RET &kp BSPC  &kp ESC   &kp RALT
         >;
@@ -103,7 +103,7 @@ keymap {
 
     symbol_layer {
         bindings = <
-        &kp STAR  &kp HASH  &kp LBKT &kp RBKT  &kp DOLLAR                        &kp PRCNT &kp GT    &kp LT    &kp EQUAL &kp RBKT    
+        &kp STAR  &kp HASH  &kp LBKT &kp RBKT  &kp DOLLAR                        &kp PRCNT &kp GT    &kp LT    &kp EQUAL &kp RBKT
         &kp COLON &kp UNDER &kp LPAR &kp DQT   &kp FSLH  &kp  DOT    &kp  DOT &kp AMPS  &kp SQT   &kp LBRC  &kp MINUS &kp SEMI 
         &kp TILDE &kp AT    &kp RPAR &kp QMARK &kp BSLH  &kp  DOT    &kp  DOT &kp PIPE  &kp EXCL  &kp RBRC  &kp CARET &kp GRAVE 
                   &kp LALT  &kp DEL  &kp TAB   &kp SPACE &sl  SYM     &sl  SYM   &kp RET   &kp BSPC  &kp ESC   &kp RALT
@@ -114,7 +114,7 @@ keymap {
 
     number_layer {
         bindings = <
-        &kp STAR  &kp N7    &kp N8    &kp N9    &kp PLUS                          &kp PRCNT &kp GT    &kp LT    &kp EQUAL &kp RBKT    
+        &kp STAR  &kp N7    &kp N8    &kp N9    &kp PLUS                          &kp PRCNT &kp GT    &kp LT    &kp EQUAL &kp RBKT
         &kp N0    &kp N4    &kp N5    &kp N6    &kp DOT &kp  PRCNT &kp  RCTRL &kp FSLH  &mt RSHFT EQUAL &mt RGUI PLUS &mt RALT MINUS &mt RCTRL STAR 
         &kp FSLH  &kp N1    &kp N2    &kp N3    &kp MINUS &kp  EQUAL   &kp  RALT  &kp DLLR  &kp LPAR  &kp RPAR  &kp DOT   &kp COMMA 
                   &kp LGUI  &kp DEL   &kp TAB   &kp SPACE &sl  SYM     &sl  SYM   &kp RET   &kp BSPC  &to DEF   &kp RGUI
@@ -124,9 +124,9 @@ keymap {
 
     navigation_layer {
         bindings = <
-        &out OUT_TOG &kp W &kp F &kp P &kp B                           &kp C_PP &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT    
-        &kp LCTRL &kp LALT   &kp LGUI  &kp LSHIFT &kp ESC &bt BT_NXT  &kp RCTRL   &kp ESC   &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT 
-        &kp COMMA &kp X      &kp C     &kp D      &kp V   &bt BT_PRV  &kp RALT    &kp INS   &kp HOME  &kp PG_DN &kp PG_UP &kp END 
+        &out OUT_TOG &kp W &kp F &kp P &kp B                           &kp C_PP &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT   
+        &kp LCTRL &kp LALT   &kp LGUI  &kp LSHIFT &kp ESC &bt BT_NXT  &kp C_BRI_UP &kp ESC &kp LEFT &kp DOWN  &kp UP    &kp RIGHT 
+        &kp COMMA &kp X      &kp C     &kp D      &kp V   &bt BT_PRV  &kp C_BRI_DN &kp INS &kp HOME &kp PG_DN &kp PG_UP &kp END 
                   &bt BT_CLR &kp DEL   &kp TAB  &kp SPACE &sl SYM     &sl SYM   &lt NUM RET &kp BSPC  &to DEF   &kp RALT
         >;
     };
