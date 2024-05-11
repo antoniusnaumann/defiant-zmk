@@ -7,6 +7,7 @@
 #define SYM 1
 #define NUM 2
 #define NAV 3
+#define FUN 4
 
 / {
 behaviors {
@@ -93,8 +94,8 @@ keymap {
     default_layer {
         bindings = <
         &kp LBKT  &kp W     &kp F     &kp P   &kp B                             &kp J     &kp L     &kp U     &kp Y     &kp RBKT  
-        &hll LCTRL A &hll LALT R &hll LGUI S &hls LSHFT T &kp G  &kp LCTRL &kp RCTRL &kp M &hls RSHFT N &hll RGUI E &hll LALT I     &hll LCTRL O 
-        &kp COMMA &kp X     &kp C     &kp D   &kp V 	  &kp LGUI   &kp RGUI   &kp K     &kp H     &kp Z     &kp DOT   &kp Q 
+        &hll LCTRL A &hll LALT R &hll LGUI S &hls LSHFT T &kp G  &to NUM &to NAV &kp M &hls RSHFT N &hll RGUI E &hll LALT I     &hll LCTRL O 
+        &kp COMMA &kp X     &kp C     &kp D   &kp V 	  &kp DEL   &to FUN   &kp K     &kp H     &kp Z     &kp DOT   &kp Q 
                   &kp LALT  &kp DEL   &kp TAB &lt NAV SPACE &sl SYM &sl SYM   &lt NUM RET &kp BSPC  &kp ESC   &kp RALT
         >;
     };
@@ -114,10 +115,10 @@ keymap {
 
     number_layer {
         bindings = <
-        &kp STAR  &kp N7    &kp N8    &kp N9    &kp PLUS                          &kp PRCNT &kp GT    &kp LT    &kp EQUAL &kp RBKT
-        &kp N0    &kp N4    &kp N5    &kp N6    &kp DOT &kp  PRCNT &kp  RCTRL &kp FSLH  &mt RSHFT EQUAL &mt RGUI PLUS &mt RALT MINUS &mt RCTRL STAR 
-        &kp FSLH  &kp N1    &kp N2    &kp N3    &kp MINUS &kp  EQUAL   &kp  RALT  &kp DLLR  &kp LPAR  &kp RPAR  &kp DOT   &kp COMMA 
-                  &kp LGUI  &kp DEL   &kp TAB   &kp SPACE &sl  SYM     &sl  SYM   &kp RET   &kp BSPC  &to DEF   &kp RGUI
+        &kp STAR  &kp N7    &kp N8    &kp N9    &kp PLUS                   &kp PRCNT &kp GT    &kp LT    &kp EQUAL &kp RBKT
+        &kp N0    &kp N4    &kp N5    &kp N6    &kp DOT &to DEF &kp  RCTRL &kp FSLH  &mt RSHFT EQUAL &mt RGUI PLUS &mt RALT MINUS &mt RCTRL STAR 
+        &kp FSLH  &kp N1    &kp N2    &kp N3    &kp MINUS &kp  DEL   &kp  RALT  &kp DLLR  &kp LPAR  &kp RPAR  &kp DOT   &kp COMMA 
+                  &kp LGUI  &kp DEL   &kp TAB   &kp SPACE &sl  SYM   &sl  SYM   &kp RET   &kp BSPC  &to DEF   &kp RGUI
         >;
 
     };
@@ -130,6 +131,16 @@ keymap {
                   &bt BT_CLR &kp DEL   &kp TAB  &kp SPACE &sl SYM     &sl SYM   &lt NUM RET &kp BSPC  &to DEF   &kp RALT
         >;
     };
+
+    function_layer {
+        bindings = <
+        &none   &kp F7    &kp F8  &kp P   &none                               &none       &none     &none    &none    &none  
+        &kp F10 &kp F4    &kp F5  &kp F6  &kp F11       &to NUM     &to NAV   &kp M       &kp RSHFT &kp RGUI &kp RALT &kp LCTRL
+        &none   &kp F1    &kp F2  &kp F3  &kp F12       &kp DEL     &to DEF   &none       &none     &none    &none    &none 
+                &kp LALT  &kp DEL &kp TAB &lt NAV SPACE &sl SYM     &sl SYM   &lt NUM RET &kp BSPC  &to DEF  &kp RALT
+        >;
+    };
+
 
 };
 
