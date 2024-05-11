@@ -10,6 +10,47 @@
 #define FUN 4
 
 / {
+    macros {
+        var_decl: var_decl {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp COLON &kp EQUAL>
+                ;
+        };
+
+        not_eq: not_eq {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp EXCL &kp EQUAL>
+                ;
+
+        };
+
+        arrow_l: arrow_l {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LT &kp MINUS>
+                ;
+
+        };
+
+        arrow_r: arrow_r {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp MINUS &kp GT>
+                ;
+
+        };
+
+
+    };
+};
+
+/ {
 behaviors {
     lhm: left_homerow_mods {
         compatible = "zmk,behavior-hold-tap";
@@ -104,9 +145,9 @@ keymap {
 
     symbol_layer {
         bindings = <
-        &kp STAR  &kp HASH  &kp LBKT &kp RBKT  &kp DOLLAR                        &kp PRCNT &kp GT    &kp LT    &kp EQUAL &kp RBKT
-        &kp COLON &kp UNDER &kp LPAR &kp DQT   &kp FSLH  &kp  DOT    &kp  DOT &kp AMPS  &kp SQT   &kp LBRC  &kp MINUS &kp SEMI 
-        &kp TILDE &kp AT    &kp RPAR &kp QMARK &kp BSLH  &kp  DOT    &kp  DOT &kp PIPE  &kp EXCL  &kp RBRC  &kp CARET &kp GRAVE 
+        &kp STAR  &kp HASH  &kp LBKT &kp RBKT  &kp DOLLAR                    &kp PRCNT &kp GT    &kp LT    &kp EQUAL &kp PLUS
+        &kp COLON &kp UNDER &kp LPAR &kp DQT   &kp FSLH  &arrow_l   &arrow_r &kp AMPS  &kp SQT   &kp LBRC  &kp MINUS &kp SEMI 
+        &kp TILDE &kp AT    &kp RPAR &kp QMARK &kp BSLH  &var_decl  &not_eq  &kp PIPE  &kp EXCL  &kp RBRC  &kp CARET &kp GRAVE 
                   &kp LALT  &kp DEL  &kp TAB   &kp SPACE &sl  SYM     &sl  SYM   &kp RET   &kp BSPC  &kp ESC   &kp RALT
         >;
     };
