@@ -44,9 +44,7 @@
                 = <&macro_tap &kp MINUS &kp GT>
                 ;
 
-        };
-
-
+        };       
     };
 };
 
@@ -137,7 +135,7 @@ keymap {
         &kp LBKT  &kp W     &kp F     &kp P   &kp B                             &kp J     &kp L     &kp U     &kp Y     &kp RBKT  
         &hll LCTRL A &hll LALT R &hll LGUI S &hls LSHFT T &kp G  &to NUM &to NAV &kp M &hls RSHFT N &hll RGUI E &hll LALT I     &hll LCTRL O 
         &kp COMMA &kp X     &kp C     &kp D   &kp V 	  &kp DEL   &to FUN   &kp K     &kp H     &kp Z     &kp DOT   &kp Q 
-                  &kp LALT  &kp DEL   &kp TAB &lt NAV SPACE &sl SYM &sl SYM   &lt NUM RET &kp BSPC  &kp ESC   &kp RALT
+                  &kp LC(LG(Q))  &kp CAPS   &kp TAB &lt NAV SPACE &sl SYM &sl SYM   &lt NUM RET &kp BSPC  &kp ESC   &kp LS(LG(N5))
         >;
     };
 
