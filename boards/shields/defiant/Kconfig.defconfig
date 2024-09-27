@@ -1,4 +1,4 @@
-if DEFIANT_LEFT
+if DEFIANT_RIGHT
 
 config ZMK_KEYBOARD_NAME
     default "Defiant"
