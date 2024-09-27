@@ -4,6 +4,21 @@
 
 / {
 
+ combos {
+        compatible = "zmk,combos";
+
+        reset_right {
+            bindings = <&bootloader>;
+            key-positions = <16 28 43>;
+            // layers = <0 2>;
+        };
+
+        reset_left {
+            bindings = <&bootloader>;
+            key-positions = <15 27 34>;
+        };
+    };
+
 keymap {
     compatible = "zmk,keymap";
 
