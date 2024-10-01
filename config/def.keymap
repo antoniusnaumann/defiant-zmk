@@ -1,0 +1,35 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
+
+/ {
+
+ combos {
+        compatible = "zmk,combos";
+
+        reset_right {
+            bindings = <&bootloader>;
+            key-positions = <16 28 43>;
+            // layers = <0 2>;
+        };
+
+        reset_left {
+            bindings = <&bootloader>;
+            key-positions = <15 27 34>;
+        };
+    };
+
+keymap {
+    compatible = "zmk,keymap";
+
+    default_layer {
+        bindings = <
+         &kp Q    &kp W     &kp E     &kp R     &kp T                             &kp Y     &kp U     &kp I     &kp O     &kp P    
+         &kp A    &kp S     &kp D     &kp F     &kp G      &kp LGUI    &kp RCTRL  &kp H     &kp J     &kp K     &kp L     &kp SEMI 
+         &kp Z    &kp X     &kp C     &kp V     &kp B 	   &kp LCTRL   &kp RALT   &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH 
+                  &kp LGUI  &kp DEL   &kp TAB   &kp SPACE  &kp LSHIFT  &kp RSHIFT &kp RET   &kp BSPC  &kp ESC   &kp RALT
+        >;
+    };
+};
+
+};
