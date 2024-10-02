@@ -1,6 +1,6 @@
 file_format: "1"
 id: defiant
-name: "Defiant von Antonius"
+name: Defiant
 type: shield
 url: https://github.com/antoniusnaumann/defiant/
 requires: [seeed_xiao]
