@@ -161,7 +161,7 @@ keymap {
         &kp LA(X) &kp AT    &kp RPAR &kp LA(QMARK) &kp BSLH  &var_decl  &not_eq  &kp PIPE  &kp LA(1) &kp RBRC   &kp CARET &kp GRAVE 
                   &kp LALT  &kp DEL  &kp TAB   &kp SPACE &sl  SYM     &sl  SYM   &kp RET   &kp BSPC  &kp ESC   &kp RALT
         >;
-    }
+    };
 
     number_layer {
         bindings = <
