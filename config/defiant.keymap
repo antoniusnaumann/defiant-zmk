@@ -98,12 +98,22 @@
             global-quick-tap;
         };
 
-        shft: shift_morph {
+        dot_colon: dot_colon {
             compatible = "zmk,behavior-mod-morph";
-            label = "SHIFT_MORPH";
+            label = "DOT_COLON";
             #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
+            bindings = <&kp PERIOD>, <&kp COLON>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        comma_semi: comma_semi {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMMA_SEMI";
+            bindings = <&kp COMMA>, <&kp SEMI>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
         combos {
@@ -146,7 +156,7 @@
             bindings = <
 &kp Z             &kp W        &kp F        &kp P          &kp B                      &kp J    &kp L         &kp U        &kp Y        &kp Q
 &hll LCTRL A      &hll LALT R  &hll LGUI S  &hls LSHFT T   &kp G    &to NUM  &to NAV  &kp M    &hls RSHFT N  &hll RGUI E  &hll LALT I  &hll LCTRL O
-&kp LEFT_BRACKET  &kp X        &kp C        &kp D          &kp V    &kp DEL  &to FUN  &kp K    &kp H         &shft COMMA SEMI &shft PERIOD COLON &kp RIGHT_BRACKET
+&kp LEFT_BRACKET  &kp X        &kp C        &kp D          &kp V    &kp DEL  &to FUN  &kp K    &kp H         &comma_semi  &dot_colon   &kp RIGHT_BRACKET
 &kp LC(LG(Q))     &kp CAPS     &kp TAB      &lt NAV SPACE  &sl SYM                    &sl SYM  &lt NUM RET   &kp BSPC     &kp ESC      &kp LS(LG(N5))
             >;
         };
