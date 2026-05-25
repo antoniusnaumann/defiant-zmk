@@ -1,2 +1,2 @@
 board: [ "xiao_ble//zmk" ]
-shield: [ "defiant_left", "defiant_right" ]
+shield: [ "defiant_left", "defiant_right", "settings_reset" ]
