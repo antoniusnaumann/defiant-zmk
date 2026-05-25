@@ -98,21 +98,11 @@
             global-quick-tap;
         };
 
-        shift_semicolon: shift_semicolon {
+        shft: shift_morph {
             compatible = "zmk,behavior-mod-morph";
-            label = "SHIFT_SEMICOLON";
-            bindings = <&kp COMMA>, <&kp SEMI>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        shift_colon: shift_colon {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SHIFT_COLON";
-            bindings = <&kp PERIOD>, <&kp COLON>;
-
-            #binding-cells = <0>;
+            label = "SHIFT_MORPH";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -156,7 +146,7 @@
             bindings = <
 &kp Z             &kp W        &kp F        &kp P          &kp B                      &kp J    &kp L         &kp U        &kp Y        &kp Q
 &hll LCTRL A      &hll LALT R  &hll LGUI S  &hls LSHFT T   &kp G    &to NUM  &to NAV  &kp M    &hls RSHFT N  &hll RGUI E  &hll LALT I  &hll LCTRL O
-&kp LEFT_BRACKET  &kp X        &kp C        &kp D          &kp V    &kp DEL  &to FUN  &kp K    &kp H         &kp COMMA    &kp PERIOD   &kp RIGHT_BRACKET
+&kp LEFT_BRACKET  &kp X        &kp C        &kp D          &kp V    &kp DEL  &to FUN  &kp K    &kp H         &shft COMMA SEMI &shft PERIOD COLON &kp RIGHT_BRACKET
 &kp LC(LG(Q))     &kp CAPS     &kp TAB      &lt NAV SPACE  &sl SYM                    &sl SYM  &lt NUM RET   &kp BSPC     &kp ESC      &kp LS(LG(N5))
             >;
         };
