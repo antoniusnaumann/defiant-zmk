@@ -101,9 +101,9 @@
         dot_colon: dot_colon {
             compatible = "zmk,behavior-mod-morph";
             label = "DOT_COLON";
-            #binding-cells = <2>;
             bindings = <&kp PERIOD>, <&kp COLON>;
 
+            #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
